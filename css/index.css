@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  /* Dark theme (default) */
+  --app-background-color: #000000;
+  --background-paper: #1e1e1e;
+  --background-card: #141414;
+  --background-container: #121212;
+
+  --text-primary: #E6E6E6;
+  --text-secondary: rgba(230, 230, 230, 0.7);
+  --text-disabled: rgba(230, 230, 230, 0.5);
+  --text-subtitle: #94979c;
+
+  --primary-main: #ff9830;
+  --primary-light: #ffad59;
+  --primary-dark: #b75123;
+
+  --success-main: #00C076;
+  --error-main: #FF4A4A;
+  --warning-main: #FF9830;
+  --info-main: #60A5FA;
+
+  --ui-border: #969696;
+  --ui-background-light: #2c2c2c;
+  --ui-background-medium: #1e1e1e;
+  --ui-background-dark: #121212;
+  --ui-card-background: #212121;
+  --ui-input-background: #3C3C3C;
+  --ui-input-border: #5A5A5A;
+
+  --chart-red: #FF4A4A;
+  --chart-green: #00C076;
+  --chart-orange: #ffa344;
+  --chart-blue: rgba(57, 124, 191, 0.8);
+  --chart-gray: #787878;
+
+  --white: #FFFFFF;
+  --black: #000000;
+  --transparent: #FFFFFF1A;
+
+  --font-family: 'IBM PLEX MONO', monospace;
+  --font-family-primary: 'IBM PLEX MONO', monospace;
+  --font-family-monospace: 'IBM Plex Mono', monospace;
+  --font-size-h1: 1.75rem;
+  --font-size-h2: 1.63rem;
+  --font-size-h3: 1.5rem;
+  --font-size-body1: 0.88rem;
+  --font-size-body2: 0.81rem;
+  --font-size-small1: 0.75rem;
+  --font-size-small2: 0.64rem;
+
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px;
+
+  --shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-medium: 0 4px 8px rgba(0,0,0,0.15);
+  --shadow-heavy: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --app-background-color: #ffffff;
+  --background-paper: #fafafa;
+  --background-card: #f5f5f5;
+  --background-container: #f5f5f5;
+
+  --text-primary: #000000;
+  --text-secondary: rgba(0, 0, 0, 0.7);
+  --text-disabled: rgba(0, 0, 0, 0.5);
+  --text-subtitle: #61656c;
+
+  --ui-border: #e0e0e0;
+  --ui-background-light: #ffffff;
+  --ui-background-medium: #fafafa;
+  --ui-background-dark: #f5f5f5;
+  --ui-card-background: #ffffff;
+  --ui-input-background: #ffffff;
+  --ui-input-border: #d0d0d0;
+
+  --chart-red: #FF4A4A;
+  --chart-green: #00C076;
+  --chart-orange: #ffa344;
+  --chart-blue: rgba(57, 124, 191, 0.8);
+  --chart-gray: #787878;
+
+  --transparent: #0000001A;
+
+  --shadow-light: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-medium: 0 4px 8px rgba(0,0,0,0.08);
+  --shadow-heavy: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+/* Global body and html styles using theme variables */
+body {
+  background-color: var(--app-background-color);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+html {
+  position: relative;
+  height: 100%;
+}
+
+/* Scrollbar styles using theme variables */
+::-webkit-scrollbar-track {
+  border-radius: var(--border-radius-medium);
+  border: solid 3px transparent;
+  background: var(--ui-background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ui-background-light);
+  border-radius: var(--border-radius-medium);
+  border: solid 3px transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ui-background-medium);
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Global utility classes using theme variables */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-disabled { color: var(--text-disabled); }
+.text-subtitle { color: var(--text-subtitle); }
+
+.bg-app { background-color: var(--app-background-color); }
+.bg-paper { background-color: var(--background-paper); }
+.bg-card { background-color: var(--background-card); }
+.bg-container { background-color: var(--background-container); }
+
+.bg-primary { background-color: var(--primary-main); }
+.bg-success { background-color: var(--success-main); }
+.bg-error { background-color: var(--error-main); }
+.bg-warning { background-color: var(--warning-main); }
+.bg-info { background-color: var(--info-main); }
+
+.border-primary { border-color: var(--primary-main); }
+.border-ui { border-color: var(--ui-border); }
+
+.rounded-small { border-radius: var(--border-radius-small); }
+.rounded-medium { border-radius: var(--border-radius-medium); }
+.rounded-large { border-radius: var(--border-radius-large); }
+
+.shadow-light { box-shadow: var(--shadow-light); }
+.shadow-medium { box-shadow: var(--shadow-medium); }
+.shadow-heavy { box-shadow: var(--shadow-heavy); }
+
+/* Spacing utilities */
+.p-1 { padding: var(--spacing-1); }
+.p-2 { padding: var(--spacing-2); }
+.p-3 { padding: var(--spacing-3); }
+.p-4 { padding: var(--spacing-4); }
+.p-6 { padding: var(--spacing-6); }
+.p-8 { padding: var(--spacing-8); }
+
+.m-1 { margin: var(--spacing-1); }
+.m-2 { margin: var(--spacing-2); }
+.m-3 { margin: var(--spacing-3); }
+.m-4 { margin: var(--spacing-4); }
+.m-6 { margin: var(--spacing-6); }
+.m-8 { margin: var(--spacing-8); }
+
+/* Typography utilities */
+.text-h1 { font-size: var(--font-size-h1); }
+.text-h2 { font-size: var(--font-size-h2); }
+.text-h3 { font-size: var(--font-size-h3); }
+.text-body1 { font-size: var(--font-size-body1); }
+.text-body2 { font-size: var(--font-size-body2); }
+.text-small1 { font-size: var(--font-size-small1); }
+.text-small2 { font-size: var(--font-size-small2); }
+
+.font-mono { font-family: var(--font-family); }
+
+/* Navigation specific styles - removed !important overrides since we're using MUI theme colors directly */

@@ -1,0 +1,137 @@
+metadata:
+  name: Sharable Trade Graphics
+  lastModified: '2025-03-05T05:35:51Z'
+  thumbnailUrl: >-
+    https://s3-alpha.figma.com/thumbnails/7b031fb8-317d-4f32-91d5-6a3653ec0c23?... # URL truncated for brevity
+nodes:
+  - id: '3:3'
+    name: Frame 2             # Main container frame
+    type: FRAME
+    fills: fill_FWLJQR        # Background image fill
+    layout: layout_3IARUA
+    children:
+      - id: '3:10'
+        name: Logowithbg x4 1 # Tread Logo element
+        type: RECTANGLE
+        fills: fill_06R5UJ    # Logo image fill
+        layout: layout_3IARUA
+      - id: '5:960'
+        name: Pricing and Token Data # Group containing main content
+        type: GROUP
+        layout: layout_3IARUA
+        children:
+          - id: '3:11'
+            name: +20.28%        # PnL Percentage Text
+            type: TEXT
+            textStyle: style_YYHXE8
+            fills: fill_DPGXD0  # Green color fill
+            layout: layout_3IARUA
+            text: +20.28%
+          - id: '3:12'
+            name: dummy 1        # Placeholder for Token Icon
+            type: RECTANGLE
+            fills: fill_XNZDA2  # Token image fill
+            layout: layout_3IARUA
+          - id: '3:14'
+            name: BTC:PERP-USDT   # Pair Name Text
+            type: TEXT
+            textStyle: style_VHX7DU
+            fills: fill_XERM7B  # White color fill
+            layout: layout_3IARUA
+            text: BTC:PERP-USDT
+          - id: '4:43'
+            name: Entry Price     # "Entry Price" Label Text
+            type: TEXT
+            textStyle: style_XAS0KC
+            fills: fill_T36MWO  # Grey color fill
+            layout: layout_3IARUA
+            text: Entry Price
+          - id: '4:44'
+            name: Mark Price      # "Mark Price" Label Text
+            type: TEXT
+            textStyle: style_XAS0KC
+            fills: fill_T36MWO  # Grey color fill
+            layout: layout_3IARUA
+            text: Mark Price
+          - id: '4:46'
+            name: 100,400         # Entry Price Value Text
+            type: TEXT
+            textStyle: style_XAS0KC
+            fills: fill_XERM7B  # White color fill
+            layout: layout_3IARUA
+            text: 100,400
+          - id: '4:47'
+            name: 120,761.12      # Mark Price Value Text
+            type: TEXT
+            textStyle: style_XAS0KC
+            fills: fill_XERM7B  # White color fill
+            layout: layout_3IARUA
+            text: 120,761.12
+          - id: '5:1034'
+            name: 'Referral code: ...' # Referral Link Text
+            type: TEXT
+            textStyle: style_XAS0KC
+            fills: fill_XERM7B  # White color fill
+            layout: layout_3IARUA
+            text: |
+              Referral code:
+              https://app.tread.fi/referral/H7GNIL3U
+      - id: '5:974'
+        name: Arrow right-circle # Arrow Icon
+        type: INSTANCE
+        fills: fill_XERM7B      # White color fill
+        layout: layout_3IARUA
+        children:
+          - id: I5:974;7758:11054
+            name: Icon
+            type: IMAGE-SVG
+            strokes: stroke_P2U5VD # Greenish stroke
+            layout: layout_3IARUA
+globalVars:                     # Definitions for styles, fills, layouts
+  styles:
+    fill_FWLJQR:              # Background Image Fill Details
+      - type: IMAGE
+        imageRef: e43ed91d8d3c6057de1a4cd4782372402701a784
+        scaleMode: FILL
+    layout_3IARUA:            # Basic Layout (likely absolute positioning)
+      mode: none
+      sizing: {}
+    fill_06R5UJ:              # Logo Image Fill Details
+      - type: IMAGE
+        imageRef: fd30256d0e97bfca15d0d8dba9d83021c8d6f7ba
+        scaleMode: FILL
+    style_YYHXE8:             # Style for PnL Text
+      fontFamily: Inter
+      fontWeight: 600
+      fontSize: 160
+      # ... other style properties
+      textAlignHorizontal: LEFT
+      textAlignVertical: TOP
+    fill_DPGXD0:              # Fill color for PnL Text (Green)
+      - '#1DCC6E'
+    fill_XNZDA2:              # Token Icon Image Fill Details
+      - type: IMAGE
+        imageRef: c3e5d7604ced4332811e4dd3666e6040ccb1b335
+        scaleMode: FILL
+    style_VHX7DU:             # Style for Pair Name Text
+      fontFamily: Inter
+      fontWeight: 800
+      fontSize: 40
+      # ... other style properties
+      textAlignHorizontal: LEFT
+      textAlignVertical: TOP
+    fill_XERM7B:              # Fill color (White)
+      - '#FFFFFF'
+    style_XAS0KC:             # Style for Price Labels/Values & Referral Text
+      fontFamily: Inter
+      fontWeight: 600
+      fontSize: 24
+      # ... other style properties
+      textAlignHorizontal: LEFT
+      textAlignVertical: TOP
+    fill_T36MWO:              # Fill color for Price Labels (Grey)
+      - '#A38F8F'
+    stroke_P2U5VD:            # Stroke Style for Arrow Icon
+      colors:
+        - '#85E0A3'
+      strokeWeight: 20px
