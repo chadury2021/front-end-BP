@@ -141,7 +141,7 @@ function InvitePage() {
               You will never see trading the same way again.
             </Typography>
             <Typography align='center' variant='body1'>
-              Realize your full potential with tread.fi.
+              Realize your full potential with Bitfrost Prime.
             </Typography>
             <Stack direction='row' spacing={2} sx={{ width: 360 }}>
               <Button
