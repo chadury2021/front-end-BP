@@ -85,11 +85,11 @@ const NAV_BAR_LINKS = Object.freeze({
     path: 'https://foul-wavelength-9af.notion.site/Privacy-Policy-29f3010cd06141929ddbd6bfc2ab98a7',
     openTab: true,
   },
-  DISCORD: {
-    icon: <img alt='Discord' src={LOGOS.discord} style={{ width: '1.5rem' }} />,
-    path: 'https://discord.com/invite/AFUQJRNjna',
-    openTab: true,
-  },
+  // DISCORD: {
+  //   icon: <img alt='Discord' src={LOGOS.discord} style={{ width: '1.5rem' }} />,
+  //   path: 'https://discord.com/invite/AFUQJRNjna',
+  //   openTab: true,
+  // },
   TELEGRAM: {
     icon: <img alt='Telegram' src={LOGOS.telegram} style={{ width: '1.5rem' }} />,
     path: 'https://t.me/+_DptCuarEKM0YWVl',
@@ -491,8 +491,8 @@ function NavBar({ version }) {
               <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.TOS} />
               <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.PRIVACY_POLICY} />
             </NavBarItem>
-            <NavBarItem itemProps={NAV_BAR_LINKS.DISCORD} />
-            <NavBarItem itemProps={NAV_BAR_LINKS.TELEGRAM} />
+            {/* <NavBarItem itemProps={NAV_BAR_LINKS.DISCORD} /> */}
+            {/* <NavBarItem itemProps={NAV_BAR_LINKS.TELEGRAM} /> */}
             {isAuthenticated && (
               <NavBarItem active={location.pathname === '/settings'} itemProps={NAV_BAR_LINKS.PROFILE}>
                 <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.SETTINGS_ACCOUNT} />
