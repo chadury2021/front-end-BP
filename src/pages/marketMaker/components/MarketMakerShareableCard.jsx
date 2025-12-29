@@ -4,7 +4,7 @@ import { Box, Stack, Typography, useTheme } from '@mui/material';
 import { TokenIcon, ExchangeIcon } from '@/shared/components/Icons';
 // Import the graphics directly so Webpack resolves the path during build
 import bgImageUrl from '@images/bg/bg.png';
-import logoImageUrl from '@images/logos/full-tread-dark.png';
+import logoImageUrl from '@images/logos/full-logo-dark.png';
 import graphic1 from '@images/mmbot-graphics/MMBot1.png';
 import graphic2 from '@images/mmbot-graphics/MMBot2.png';
 import graphic3 from '@images/mmbot-graphics/MMBot3.png';

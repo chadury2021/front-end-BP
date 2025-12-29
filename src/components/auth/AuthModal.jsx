@@ -164,6 +164,7 @@ function AuthModal({ captchaKey }) {
           }}
         >
           {/* Keep order as per design reference */}
+          <MenuItem value='bitfrostPrime'>Bitfrost Prime</MenuItem>
           <MenuItem value='dark'>Dark</MenuItem>
           <MenuItem value='og'>OG</MenuItem>
           <MenuItem value='blue'>Blue</MenuItem>
@@ -254,10 +255,10 @@ function AuthModal({ captchaKey }) {
                   display: 'block',
                 }}
               />
-              {renderThemeSelector({
-                right: { md: 20 },
-                bottom: { md: 16 },
-              })}
+              {/* {renderThemeSelector({ */}
+              {/*   right: { md: 20 }, */}
+              {/*   bottom: { md: 16 }, */}
+              {/* })} */}
             </Box>
           )}
 
@@ -278,11 +279,11 @@ function AuthModal({ captchaKey }) {
             }}
           >
             {renderContent()}
-            {isMobile &&
-              renderThemeSelector({
-                right: 16,
-                bottom: 12,
-              })}
+            {/* {isMobile && */}
+            {/*   renderThemeSelector({ */}
+            {/*     right: 16, */}
+            {/*     bottom: 12, */}
+            {/*   })} */}
           </Box>
         </Box>
       </DialogContent>

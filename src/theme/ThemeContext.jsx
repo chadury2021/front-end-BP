@@ -9,10 +9,12 @@ import gateTheme from './gateTheme';
 import asterTheme from './asterTheme';
 import bip01Theme from './bip01Theme';
 import ogTheme from './OgTheme';
+import { bitfrostPrimeTheme } from './bitfrostPrimeTheme';
 
 // Central registry of available themes (kept DRY)
 const THEMES = {
   dark: theme,
+  bitfrostPrime: bitfrostPrimeTheme,
   blue: blueTheme,
   binance: binanceTheme,
   bybit: bybitTheme,
@@ -27,7 +29,7 @@ const THEMES = {
 const VALID_THEMES = Object.keys(THEMES);
 
 const ThemeContext = createContext({
-  currentTheme: 'dark',
+  currentTheme: 'bitfrostPrime',
   theme: null,
   toggleTheme: () => {},
   setTheme: () => {},

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 // Import the graphics directly so Webpack resolves the path during build
-import logoImageUrl from '@images/logos/full-tread-dark.png';
+import logoImageUrl from '@images/logos/full-logo-dark.png';
 import lifetimeGraphic from '@images/lifetime-graphics/lifetime.png';
 import { formatCurrency } from './utils/mmBotShareUtils';
 

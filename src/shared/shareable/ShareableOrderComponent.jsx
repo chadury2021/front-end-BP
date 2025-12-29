@@ -17,7 +17,7 @@ import buyDownImageUrl from '@images/bg/buy-down.png';
 import buyUpImageUrl from '@images/bg/buy-up.png';
 import sellDownImageUrl from '@images/bg/sell-down.png';
 import sellUpImageUrl from '@images/bg/sell-up.png';
-import logoImageUrl from '@images/logos/full-tread-dark.png';
+import logoImageUrl from '@images/logos/full-logo-dark.png';
 
 // Mock data structure for initial development / fallback
 const defaultMockData = {

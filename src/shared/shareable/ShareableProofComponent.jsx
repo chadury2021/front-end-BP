@@ -1,7 +1,7 @@
 import { getEpochStartAndEnd } from '@/pages/explorer/utils/epoch'; // Adjust path if needed
 import bgImageUrl from '@images/bg/bg.png';
 import ExchangeIcons from '@images/exchange_icons';
-import logoImageUrl from '@images/logos/full-tread-dark.png';
+import logoImageUrl from '@images/logos/full-logo-dark.png';
 import monadPrimary from '@images/logos/monad-primary.png';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 import dayjs from 'dayjs'; // For timestamp formatting

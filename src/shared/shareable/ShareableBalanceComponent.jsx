@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 import bgImageUrl from '@images/bg/bg.png';
-import logoImageUrl from '@images/logos/full-tread-dark.png';
+import logoImageUrl from '@images/logos/full-logo-dark.png';
 import { formatNumber } from '@/shared/utils/formatNumber';
 import QRCode from 'react-qr-code';
 import ProofLogoImg from '@/pages/explorer/proofUtils/ProofLogoImg';

@@ -9,7 +9,7 @@ import { TokenIcon } from '@/shared/components/Icons';
 
 // Import the images directly so Webpack resolves the path during build
 import bgImageUrl from '@images/bg/bg.png';
-import logoImageUrl from '@images/logos/full-tread-dark.png';
+import logoImageUrl from '@images/logos/full-logo-dark.png';
 
 // Component responsible for rendering the visual structure to be captured
 const ShareableImageComponent = React.forwardRef(({ positionData, headerTitle }, ref) => {

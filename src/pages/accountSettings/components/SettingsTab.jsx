@@ -129,6 +129,7 @@ export default function SettingsTab() {
           value={currentTheme}
           onChange={(e) => setTheme(e.target.value)}
         >
+          <MenuItem value='bitfrostPrime'>Bitfrost Prime</MenuItem>
           <MenuItem value='dark'>Dark</MenuItem>
           <MenuItem value='og'>OG</MenuItem>
           <MenuItem value='blue'>Blue</MenuItem>
@@ -206,22 +207,22 @@ export default function SettingsTab() {
         </Table>
       </Paper>
 
-      <Paper elevation={0} sx={{ p: 4 }}>
-        <Typography gutterBottom variant='h6'>
-          Appearance
-        </Typography>
-        <Divider sx={{ mb: 4 }} />
-        <Table>
-          <TableBody>
-            <TableRow>
-              <AccountSettingTableCell sx={{ width: '80%', paddingLeft: 0 }}>
-                {renderAppearanceThemePreference()}
-              </AccountSettingTableCell>
-              <AccountSettingTableCell align='right'>{renderThemeDropdown()}</AccountSettingTableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-      </Paper>
+      {/* <Paper elevation={0} sx={{ p: 4 }}> */}
+      {/*   <Typography gutterBottom variant='h6'> */}
+      {/*     Appearance */}
+      {/*   </Typography> */}
+      {/*   <Divider sx={{ mb: 4 }} /> */}
+      {/*   <Table> */}
+      {/*     <TableBody> */}
+      {/*       <TableRow> */}
+      {/*         <AccountSettingTableCell sx={{ width: '80%', paddingLeft: 0 }}> */}
+      {/*           {renderAppearanceThemePreference()} */}
+      {/*         </AccountSettingTableCell> */}
+      {/*         <AccountSettingTableCell align='right'>{renderThemeDropdown()}</AccountSettingTableCell> */}
+      {/*       </TableRow> */}
+      {/*     </TableBody> */}
+      {/*   </Table> */}
+      {/* </Paper> */}
       {user.is_superuser && (
         <Paper elevation={0} sx={{ p: 4 }}>
           <Typography gutterBottom variant='h6'>

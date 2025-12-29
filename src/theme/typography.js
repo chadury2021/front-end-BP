@@ -49,6 +49,14 @@ const typography = {
       text: joinFontFamilies(FONT_COMBINATIONS.GATE_PRIMARY), // Gate_Sans for text labels, pair names, etc.
       data: joinFontFamilies(FONT_COMBINATIONS.GATE_MONOSPACE), // Financial data, prices, quantities
     },
+    bitfrostPrime: {
+      primary: ['IBM Plex Sans', 'Arial', 'sans-serif'].join(','), // UI text
+      monospace: ['IBM Plex Mono', 'monospace'].join(','), // Numbers/data
+      numbers: ['IBM Plex Mono', 'monospace'].join(','), // Specifically for numbers
+      ui: ['IBM Plex Sans', 'Arial', 'sans-serif'].join(','), // UI elements
+      text: ['IBM Plex Sans', 'Arial', 'sans-serif'].join(','), // Text labels, pair names, etc.
+      data: ['IBM Plex Mono', 'monospace'].join(','), // Financial data, prices, quantities
+    }
   },
   fontWeights: {
     weight100: 100,
