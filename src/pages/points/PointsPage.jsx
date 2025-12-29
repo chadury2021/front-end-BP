@@ -75,7 +75,7 @@ function PointsPage() {
                 <Stack direction='column' spacing={1}>
                   <Typography variant='h1'>Points</Typography>
                   <Typography variant='subtitle1'>
-                    Accumulate points by trading on tread.fi.
+                    Accumulate points by trading on Bitfrost Prime.
                     <Link
                       href='https://foul-wavelength-9af.notion.site/Tread-fi-Points-Program-13f60eedf44c80f98812fdb7a3fbb5c0'
                       underline='none'

@@ -88,7 +88,7 @@ export default function LifetimeStats({ lifetime }) {
           <Stack direction='row' sx={{ justifyContent: 'space-between' }}>
             <LabelTooltip
               label='Volume'
-              link='https://docs.tread.fi/market-maker-bot#lifetime-summary'
+              link=''
               placement='left'
               title={
                 <div>
@@ -110,7 +110,7 @@ export default function LifetimeStats({ lifetime }) {
           <Stack direction='row' sx={{ justifyContent: 'space-between' }}>
             <LabelTooltip
               label='Net Fees'
-              link='https://docs.tread.fi/market-maker-bot#lifetime-summary'
+              link=''
               placement='left'
               title={
                 <div>

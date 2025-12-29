@@ -34,7 +34,7 @@ class ErrorBoundary extends React.Component {
               <br />
               Please try refreshing the page or contact support if the problem persists:
               <br />
-              Email support@tread.fi
+              Email justin@bitfrost.xyz
             </Typography>
             <Stack direction='column' sx={{ paddingTop: '40px' }}>
               <Box

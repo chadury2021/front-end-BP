@@ -168,7 +168,7 @@ function ForgotPasswordContent() {
       )}
 
       <Typography color='text.secondary' variant='body2'>
-        Having trouble? <Link href='mailto:support@tread.fi'>Contact Support</Link>
+        Having trouble? <Link href='mailto:justin@bitfrost.xyz'>Contact Support</Link>
       </Typography>
     </Box>
   );

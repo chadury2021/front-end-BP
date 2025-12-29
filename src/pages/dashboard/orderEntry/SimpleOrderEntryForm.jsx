@@ -44,7 +44,7 @@ function SimpleOrderEntryStats({ duration, strategy, preTradeEstimationData, loa
           <LabelTooltip
             label='Participation Rate'
             labelTextVariant='small1'
-            link='https://docs.tread.fi/submitting-orders/algo-swap-mode'
+            link=''
             placement='left'
             title='The estimated percentage of the total market volume your order will represent. High participation can impact the price.'
           />
@@ -58,7 +58,7 @@ function SimpleOrderEntryStats({ duration, strategy, preTradeEstimationData, loa
           <LabelTooltip
             label='Order Volatility'
             labelTextVariant='small1'
-            link='https://docs.tread.fi/submitting-orders/algo-swap-mode'
+            link=''
             placement='left'
             title='The expected price fluctuation during the execution of your order.'
           />
@@ -70,7 +70,7 @@ function SimpleOrderEntryStats({ duration, strategy, preTradeEstimationData, loa
           <LabelTooltip
             label='Market Volume'
             labelTextVariant='small1'
-            link='https://docs.tread.fi/submitting-orders/algo-swap-mode'
+            link=''
             placement='left'
             title='An indicator of current liquidity.'
           />

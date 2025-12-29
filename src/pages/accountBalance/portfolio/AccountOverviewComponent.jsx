@@ -414,7 +414,7 @@ function AccountOverviewComponent({ accountBalances, selectedAccount, assets, pa
               <SubTitleTypography>
                 <LabelTooltip
                   label='Total Equity'
-                  link='https://docs.tread.fi/portfolio/portfolio-tab'
+                  link=''
                   title='Your current overall portfolio value, representing the sum of your cash, spot asset holdings, and the net profit or loss from all your open perpetual futures positions.'
                 />
               </SubTitleTypography>
@@ -438,7 +438,7 @@ function AccountOverviewComponent({ accountBalances, selectedAccount, assets, pa
               <SubTitleTypography>
                 <LabelTooltip
                   label='Directional Bias'
-                  link='https://tread-labs.gitbook.io/api-docs/portfolio'
+                  link=''
                   title="Your portfolio's overall lean towards long or short positions."
                 />
               </SubTitleTypography>
@@ -472,7 +472,7 @@ function AccountOverviewComponent({ accountBalances, selectedAccount, assets, pa
                 <SubTitleTypography>
                   <LabelTooltip
                     label='Unrealized PnL'
-                    link='https://tread-labs.gitbook.io/api-docs/portfolio'
+                    link=''
                     title='The current profit or loss on your open positions.'
                   />
                 </SubTitleTypography>
@@ -541,7 +541,7 @@ function AccountOverviewComponent({ accountBalances, selectedAccount, assets, pa
                     <LegendToggle
                       active={showEquitySeries}
                       activeColor={theme.palette.text.primary}
-                      docLink='https://docs.tread.fi/portfolio/portfolio-tab'
+                      docLink=''
                       docTooltip='About Total Equity'
                       inactiveColor='text.disabled'
                       label='Total Equity'
@@ -553,7 +553,7 @@ function AccountOverviewComponent({ accountBalances, selectedAccount, assets, pa
                     <LegendToggle
                       active={showGmvSeries}
                       activeColor='primary.main'
-                      docLink='https://docs.tread.fi/portfolio/portfolio-tab'
+                      docLink=''
                       docTooltip='About GMV'
                       inactiveColor='text.disabled'
                       label='Gross Market Value (GMV)'

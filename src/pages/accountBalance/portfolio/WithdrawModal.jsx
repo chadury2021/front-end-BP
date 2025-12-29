@@ -441,7 +441,7 @@ function WithdrawModal({ open, onClose, accountId, balances }) {
           <WalletDisplayBox
             address={sourceWallet}
             label='From'
-            walletProvider='tread.fi'
+            walletProvider='bitfrost'
             walletType={walletMetadata.walletType}
           />
 

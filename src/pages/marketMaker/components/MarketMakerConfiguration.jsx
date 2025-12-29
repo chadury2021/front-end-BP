@@ -33,7 +33,7 @@ export default function MarketMakerConfiguration({ durationMinutes, passiveness,
           <Stack direction='row' sx={{ justifyContent: 'space-between' }}>
             <LabelTooltip
               label='Duration'
-              link='https://docs.tread.fi/market-maker-bot#duration-calculations'
+              link=''
               placement='left'
               title={<Typography>Estimated runtime derived from selected mode.</Typography>}
             />
@@ -43,7 +43,7 @@ export default function MarketMakerConfiguration({ durationMinutes, passiveness,
           <Stack direction='row' sx={{ justifyContent: 'space-between' }}>
             <LabelTooltip
               label='Participation Rate'
-              link='https://docs.tread.fi/market-maker-bot#execution-settings'
+              link=''
               placement='left'
               title={
                 <Typography>

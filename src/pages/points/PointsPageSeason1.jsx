@@ -710,7 +710,7 @@ function PointsPageSeason1() {
               </Grid>
               <Button
                 color='primary'
-                href='https://docs.tread.fi/season-1-trade-earn-vote/points-program'
+                href=''
                 rel='noopener noreferrer'
                 startIcon={<MenuBookIcon fontSize='small' />}
                 sx={{
@@ -942,14 +942,14 @@ function PointsPageSeason1() {
               >
                 <Tab label='Points' />
                 <Tab label='Leaderboard' />
-                {isVotingEnabled && <Tab label='Vote' />}
+                {/* {isVotingEnabled && <Tab label='Vote' />} */}
               </Tabs>
             </Box>
 
             {/* Tab Content */}
             {activeTab === 0 && renderPointsTab()}
             {activeTab === 1 && renderLeaderboardTab()}
-            {isVotingEnabled && activeTab === 2 && renderVoteTab()}
+            {/* {isVotingEnabled && activeTab === 2 && renderVoteTab()} */}
           </Stack>
         </Paper>
       </Container>

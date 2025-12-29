@@ -186,7 +186,7 @@ function ShareableBalanceComponent({ balanceData, headerTitle }, ref) {
               level='M'
               size={200}
               // TODO: Replace with actual Monad proof URL when available
-              value='https://app.tread.fi'
+              value=''
             />
             <Typography
               sx={{

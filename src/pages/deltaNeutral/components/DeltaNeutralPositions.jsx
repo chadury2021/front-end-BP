@@ -1003,7 +1003,7 @@ export default function DeltaNeutralPositions({
               </Tooltip>
 
               {/* Delete (hide) position button */}
-              <Tooltip title='Remove this position from the list (tread.fi only, does not close out the position on exchange)'>
+              <Tooltip title='Remove this position from the list (Bitfrost only, does not close out the position on exchange)'>
                 <span>
                   <IconButton
                     size='small'

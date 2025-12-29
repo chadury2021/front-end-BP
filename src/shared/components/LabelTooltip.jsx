@@ -61,7 +61,7 @@ export const TreadTooltipVariant = {
   },
   directional_bias: {
     text: 'Directional Bias',
-    link: 'https://docs.tread.fi/multi-spread-orders/directional-bias',
+    link: '',
     definition:
       'Run the bot with a bias towards long or short price action for a higher chance at a profitable PnL. The bot will buy more earlier than sell for long bias and vice versa, while keeping the exposure reasonably balanced.',
   },

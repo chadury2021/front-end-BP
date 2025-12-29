@@ -76,7 +76,7 @@ export function TraderProfileComponent({ consensusEvents, traderIdExchanges, dat
               <SubTitleTypography>
                 <LabelTooltip
                   label='Total Equity'
-                  link='https://tread-labs.gitbook.io/api-docs/portfolio'
+                  link=''
                   title='Your current overall portfolio value, representing the sum of your cash, spot asset holdings, and the net profit or loss from all your open perpetual futures positions.'
                 />
               </SubTitleTypography>
@@ -91,7 +91,7 @@ export function TraderProfileComponent({ consensusEvents, traderIdExchanges, dat
               <SubTitleTypography>
                 <LabelTooltip
                   label='Unrealized PnL'
-                  link='https://tread-labs.gitbook.io/api-docs/portfolio'
+                  link=''
                   title='The current profit or loss on your open positions.'
                 />
               </SubTitleTypography>
@@ -106,7 +106,7 @@ export function TraderProfileComponent({ consensusEvents, traderIdExchanges, dat
               <SubTitleTypography>
                 <LabelTooltip
                   label='Notional Exposure'
-                  link='https://tread-labs.gitbook.io/api-docs/portfolio'
+                  link=''
                   title='The total notional value of all your open positions, indicating your total market exposure.'
                 />
               </SubTitleTypography>
@@ -123,7 +123,7 @@ export function TraderProfileComponent({ consensusEvents, traderIdExchanges, dat
               <SubTitleTypography>
                 <LabelTooltip
                   label='Unrealized PnL'
-                  link='https://tread-labs.gitbook.io/api-docs/portfolio'
+                  link=''
                   title='The current profit or loss on your open positions over time.'
                 />
               </SubTitleTypography>
@@ -139,7 +139,7 @@ export function TraderProfileComponent({ consensusEvents, traderIdExchanges, dat
               <SubTitleTypography>
                 <LabelTooltip
                   label='Notional Exposure'
-                  link='https://tread-labs.gitbook.io/api-docs/portfolio'
+                  link=''
                   title='The total notional value of all your open positions over time, indicating your total market exposure.'
                 />
               </SubTitleTypography>
@@ -159,7 +159,7 @@ export function TraderProfileComponent({ consensusEvents, traderIdExchanges, dat
                 <Stack alignItems='center' direction='row' spacing={1}>
                   <LabelTooltip
                     label='Cumulative Volume'
-                    link='https://tread-labs.gitbook.io/api-docs/portfolio'
+                    link=''
                     title='The total trading volume over the selected time period, showing your trading activity.'
                   />
                   <Typography component='span'>- {formatQty(totalVolume)} USDT</Typography>

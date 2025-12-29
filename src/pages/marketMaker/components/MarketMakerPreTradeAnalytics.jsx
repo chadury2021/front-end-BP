@@ -162,7 +162,7 @@ export default function MarketMakerPreTradeAnalytics({
             <Stack alignItems='center' direction='row' spacing={0.5}>
               <LabelTooltip
                 label={`Inventory${leverageDisplay ? ` (${leverageDisplay})` : ''}`}
-                link='https://docs.tread.fi/market-maker-bot#pre-trade-analytics'
+                link=''
                 placement='left'
                 title={
                   <div>
@@ -203,7 +203,7 @@ export default function MarketMakerPreTradeAnalytics({
           <Stack direction='row' sx={{ justifyContent: 'space-between' }}>
             <LabelTooltip
               label='Available Margin'
-              link='https://docs.tread.fi/market-maker-bot#pre-trade-analytics'
+              link=''
               placement='left'
               title={
                 <div>
@@ -229,7 +229,7 @@ export default function MarketMakerPreTradeAnalytics({
           <Stack direction='row' sx={{ justifyContent: 'space-between' }}>
             <LabelTooltip
               label='Recommended Inventory'
-              link='https://docs.tread.fi/market-maker-bot#pre-trade-analytics'
+              link=''
               placement='left'
               title={
                 <div>
@@ -252,7 +252,7 @@ export default function MarketMakerPreTradeAnalytics({
           <Stack direction='row' sx={{ justifyContent: 'space-between' }}>
             <LabelTooltip
               label='Exchange Fees'
-              link='https://docs.tread.fi/market-maker-bot#pre-trade-analytics'
+              link=''
               placement='left'
               title={
                 <div>
@@ -280,7 +280,7 @@ export default function MarketMakerPreTradeAnalytics({
           <Stack direction='row' sx={{ justifyContent: 'space-between' }}>
             <LabelTooltip
               label='PnL Est.'
-              link='https://docs.tread.fi/market-maker-bot#pre-trade-analytics'
+              link=''
               placement='left'
               title={
                 <div>
@@ -305,7 +305,7 @@ export default function MarketMakerPreTradeAnalytics({
           <Stack direction='row' sx={{ justifyContent: 'space-between' }}>
             <LabelTooltip
               label='Total Est. Fees'
-              link='https://docs.tread.fi/market-maker-bot#pre-trade-analytics'
+              link=''
               placement='left'
               title={
                 <div>

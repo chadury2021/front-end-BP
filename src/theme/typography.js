@@ -55,7 +55,7 @@ const typography = {
       numbers: ['IBM Plex Mono', 'monospace'].join(','), // Specifically for numbers
       ui: ['IBM Plex Sans', 'Arial', 'sans-serif'].join(','), // UI elements
       text: ['IBM Plex Sans', 'Arial', 'sans-serif'].join(','), // Text labels, pair names, etc.
-      data: ['IBM Plex Mono', 'monospace'].join(','), // Financial data, prices, quantities
+      data: ['DIN Alternate', 'monospace'].join(','), // Financial data, prices, quantities
     }
   },
   fontWeights: {

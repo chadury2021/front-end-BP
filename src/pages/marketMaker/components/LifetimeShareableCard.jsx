@@ -79,7 +79,7 @@ const LifetimeShareableCard = React.forwardRef(({ lifetimeData }, ref) => {
           }}
         >
           <img
-            alt='Tread.fi Logo'
+            alt='Bitfrost Prime Logo'
             src={logoImageUrl}
             style={{
               width: '100%',

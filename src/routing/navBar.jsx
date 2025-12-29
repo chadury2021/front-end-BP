@@ -60,21 +60,21 @@ const NAV_BAR_LINKS = Object.freeze({
   API_KEYS_MOBILE: { label: 'Add Exchange', onClick: 'openKeyManagement' },
   INFO: { icon: <Info sx={{ fontSize: '1.5rem' }} /> },
   HELP: { label: 'Help' },
-  DOCUMENTATION: {
-    label: 'Documentation',
-    path: 'https://docs.tread.fi/',
-    openTab: true,
-  },
-  RELEASE_NOTES: {
-    label: 'Release Notes',
-    path: 'https://luminous-ganache-c828dc.netlify.app/',
-    openTab: true,
-  },
-  FEATURE_REQUEST: {
-    label: 'Feature Request',
-    path: 'https://www.tread.fi/feature-request',
-    openTab: true,
-  },
+  // DOCUMENTATION: {
+  //   label: 'Documentation',
+  //   path: '',
+  //   openTab: true,
+  // },
+  // RELEASE_NOTES: {
+  //   label: 'Release Notes',
+  //   path: '',
+  //   openTab: true,
+  // },
+  // FEATURE_REQUEST: {
+  //   label: 'Feature Request',
+  //   path: '',
+  //   openTab: true,
+  // },
   TOS: {
     label: 'Terms of Service',
     path: 'https://foul-wavelength-9af.notion.site/Terms-of-Service-7eeb5222e8c845c2b411601ccc729f99',
@@ -200,7 +200,7 @@ function NavBar({ version }) {
           sx={{ marginRight: '2rem' }}
           to='/'
         >
-          <img alt='Tread Logo' id='nav-bar-tread-logo' src={LOGOS.logo} style={{ height: 30 }} />
+          <img alt='Bitfrost Prime Logo' id='nav-bar-tread-logo' src={LOGOS.logo} style={{ height: 30 }} />
         </IconButton>
 
         {isMobile ? (
@@ -311,14 +311,14 @@ function NavBar({ version }) {
                   </Typography>
                 </Box>
                 <MobileNavBarItem itemProps={NAV_BAR_LINKS.HELP} size={1}>
-                  <MobileNavBarItem isSubItem itemProps={NAV_BAR_LINKS.DOCUMENTATION} size={1} onClick={closeDrawer} />
-                  <MobileNavBarItem isSubItem itemProps={NAV_BAR_LINKS.RELEASE_NOTES} size={1} onClick={closeDrawer} />
-                  <MobileNavBarItem
-                    isSubItem
-                    itemProps={NAV_BAR_LINKS.FEATURE_REQUEST}
-                    size={1}
-                    onClick={closeDrawer}
-                  />
+                  {/* <MobileNavBarItem isSubItem itemProps={NAV_BAR_LINKS.DOCUMENTATION} size={1} onClick={closeDrawer} /> */}
+                  {/* <MobileNavBarItem isSubItem itemProps={NAV_BAR_LINKS.RELEASE_NOTES} size={1} onClick={closeDrawer} /> */}
+                  {/* <MobileNavBarItem */}
+                  {/*   isSubItem */}
+                  {/*   itemProps={NAV_BAR_LINKS.FEATURE_REQUEST} */}
+                  {/*   size={1} */}
+                  {/*   onClick={closeDrawer} */}
+                  {/* /> */}
                   <MobileNavBarItem isSubItem itemProps={NAV_BAR_LINKS.TOS} size={1} onClick={closeDrawer} />
                   <MobileNavBarItem isSubItem itemProps={NAV_BAR_LINKS.PRIVACY_POLICY} size={1} onClick={closeDrawer} />
                 </MobileNavBarItem>
@@ -485,9 +485,9 @@ function NavBar({ version }) {
               />
             </TutorialHighlight>
             <NavBarItem itemProps={NAV_BAR_LINKS.INFO}>
-              <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.DOCUMENTATION} />
-              <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.RELEASE_NOTES} />
-              <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.FEATURE_REQUEST} />
+              {/* <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.DOCUMENTATION} /> */}
+              {/* <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.RELEASE_NOTES} /> */}
+              {/* <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.FEATURE_REQUEST} /> */}
               <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.TOS} />
               <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.PRIVACY_POLICY} />
             </NavBarItem>

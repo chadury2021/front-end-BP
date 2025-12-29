@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 const TitleContext = createContext();
 
 function getTitle(title) {
-  return title ? `${title} - tread.fi` : 'tread.fi - Algorithmic Trading';
+  return title ? `${title} - Bitfrost Prime` : 'Bitfrost Prime - Algorithmic Trading';
 }
 
 export function TitleProvider({ children }) {

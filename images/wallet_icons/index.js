@@ -8,7 +8,7 @@ const ICONS = {
   phantom: Phantom,
   phantom_eth: Phantom,
   solflare: Solflare,
-  tread: Tread,
+  bitfrost: Tread,
   default: Tread,
 };
 

@@ -35,7 +35,7 @@ const defaultMockData = {
   time_start: '2025-04-25T12:30:45Z', // Trade Start Time
   time_end: '2025-04-25T13:45:30Z', // Trade End Time
   order_id: '12345', // Order ID for QR code
-  referralLink: 'https://app.tread.fi/referral/H7GNIL3U', // Referral Link
+  referralLink: '', // Referral Link
   accountId: '7e2d62a5-a826-40a1-a20f-2e6684413465', // Add accountId
   arrival_cost: 0.5, // In BPS
   vwap_cost: 0.75, // In BPS
@@ -240,7 +240,7 @@ const ShareableOrderComponent = React.forwardRef(({ orderData = defaultMockData 
           }}
         >
           <img
-            alt='Tread.fi Logo'
+            alt='Bitfrost Prime Logo'
             src={logoImageUrl}
             style={{
               width: '100%',

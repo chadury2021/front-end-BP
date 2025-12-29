@@ -85,7 +85,7 @@ export const handleHelpClick = async (id, time_start, duration, account_names, s
       Fill Percentage: ${pct_filled}%`.trim();
 
     const hiddenLink = document.createElement('a');
-    hiddenLink.href = `mailto:help@tread.fi?subject=Issue%20with%20order%20${id}&body=${encodeURIComponent(emailBody)}`;
+    hiddenLink.href = `mailto:justin@bitfrost.xyz?subject=Issue%20with%20order%20${id}&body=${encodeURIComponent(emailBody)}`;
     hiddenLink.style.display = 'none';
     document.body.appendChild(hiddenLink);
     hiddenLink.click();
