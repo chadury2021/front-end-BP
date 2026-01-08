@@ -2,10 +2,7 @@ import {
   getTelegramMetadata,
   link_telegram_oauth,
   unlink_telegram,
-  updateUserProfile,
   updateUserPreferences,
-  verify2FA,
-  verifyPassword,
 } from '@/apiServices';
 import Grid from '@mui/material/Unstable_Grid2';
 import useViewport from '@/shared/hooks/useViewport';
@@ -24,17 +21,10 @@ import { useUserMetadata } from '@/shared/context/UserMetadataProvider';
 import { AccountSettingTableCell, AccountSettingsLabelTableCell } from '@/shared/orderTable/util';
 import { formatDateTime } from '@/util';
 import CheckCircleOutline from '@mui/icons-material/CheckCircleOutline';
-import CloseIcon from '@mui/icons-material/Close';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import {
   Box,
   Button,
-  Dialog,
-  DialogContent,
-  DialogTitle,
   Divider,
-  IconButton,
   Paper,
   Skeleton,
   Stack,
@@ -42,29 +32,16 @@ import {
   Table,
   TableBody,
   TableRow,
-  TextField,
   Typography,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import React, { useContext, useEffect, useState } from 'react';
 
 export default function AccountTab() {
   const { user, setUser, loadUserMetadata } = useUserMetadata();
-  const theme = useTheme();
   const { isMobile } = useViewport();
   const [telegramMetadata, setTelegramMetadata] = useState({});
   const [isTelegramMetadataLoading, setIsTelegramMetadataLoading] = useState(false);
   const { showAlert } = useContext(ErrorContext);
-  const [isEmailModalOpen, setEmailModalOpen] = useState(false);
-  const [emailInput, setEmailInput] = useState('');
-  const [passwordInput, setPasswordInput] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [mfaCodeInput, setMfaCodeInput] = useState('');
-  const [isUpdatingEmail, setIsUpdatingEmail] = useState(false);
-
-  const updateTelegramMetadata = (key, value) => {
-    setTelegramMetadata({ ...telegramMetadata, [key]: value });
-  };
 
   const fetchTelegramMetadata = async () => {
     setIsTelegramMetadataLoading(true);
@@ -286,45 +263,6 @@ export default function AccountTab() {
     }
   };
 
-  const handleUpdateEmail = async () => {
-    setIsUpdatingEmail(true);
-    try {
-      if (user.is_2fa_enabled) {
-        const verifyResult = await verify2FA(mfaCodeInput);
-        if (!verifyResult.success) {
-          showAlert({
-            severity: 'error',
-            message: verifyResult.message || 'Invalid 2FA code.',
-          });
-          setIsUpdatingEmail(false);
-          return;
-        }
-      }
-
-      const verifyResult = await verifyPassword(passwordInput);
-      if (!verifyResult.is_password_correct) {
-        showAlert({ severity: 'error', message: 'Invalid password.' });
-        setIsUpdatingEmail(false);
-        return;
-      }
-
-      await updateUserProfile({ email: emailInput });
-      showAlert({ severity: 'success', message: 'Email updated successfully' });
-      setUser(user);
-      loadUserMetadata();
-      setEmailModalOpen(false);
-    } catch (error) {
-      showAlert({
-        severity: 'error',
-        message: `Failed to update email: ${error.message}`,
-      });
-    } finally {
-      setIsUpdatingEmail(false);
-    }
-  };
-
-  const handleCloseEmailModal = () => setEmailModalOpen(false);
-
   if (!user || Object.keys(user).length === 0) {
     return null;
   }
@@ -344,19 +282,6 @@ export default function AccountTab() {
               </AccountSettingsLabelTableCell>
               <AccountSettingTableCell>
                 <Typography>{user.username}</Typography>
-              </AccountSettingTableCell>
-            </TableRow>
-            <TableRow>
-              <AccountSettingsLabelTableCell>
-                <Typography variant='subtitle2'>Email</Typography>
-              </AccountSettingsLabelTableCell>
-              <AccountSettingTableCell>
-                <Stack alignItems='center' direction='row' justifyContent='space-between' spacing={2}>
-                  <Typography>{user.email}</Typography>
-                  <Button variant='outlined' onClick={() => setEmailModalOpen(true)}>
-                    Edit
-                  </Button>
-                </Stack>
               </AccountSettingTableCell>
             </TableRow>
             <TableRow>
@@ -470,74 +395,6 @@ export default function AccountTab() {
           </Grid>
         )}
       </Paper>
-
-      {/* Email Modal */}
-      <Dialog fullWidth maxWidth={isMobile ? '100%' : 'xs'} open={isEmailModalOpen} onClose={handleCloseEmailModal}>
-        <DialogTitle sx={{ p: 4, bgcolor: theme.palette.background.paper }}>
-          <Typography variant='h6'>Edit email address</Typography>
-          <IconButton
-            aria-label='close'
-            size='large'
-            sx={{ position: 'absolute', right: 8, top: 8, color: theme.palette.text.primary }}
-            onClick={handleCloseEmailModal}
-          >
-            <CloseIcon />
-          </IconButton>
-        </DialogTitle>
-        <DialogContent sx={{ bgcolor: theme.palette.background.paper, p: 4 }}>
-          <Stack spacing={4}>
-            <Divider />
-            <TextField
-              fullWidth
-              InputLabelProps={{ sx: { color: theme.palette.text.secondary } }}
-              label='New email address'
-              placeholder='Enter new email address'
-              value={emailInput}
-              variant='outlined'
-              onChange={(e) => setEmailInput(e.target.value)}
-            />
-            <TextField
-              fullWidth
-              InputProps={{
-                endAdornment: (
-                  <IconButton
-                    edge='end'
-                    sx={{ color: theme.palette.text.secondary }}
-                    onClick={() => setShowPassword((show) => !show)}
-                  >
-                    {showPassword ? <Visibility /> : <VisibilityOff />}
-                  </IconButton>
-                ),
-              }}
-              label='Password'
-              placeholder='Enter password'
-              type={showPassword ? 'text' : 'password'}
-              value={passwordInput}
-              variant='outlined'
-              onChange={(e) => setPasswordInput(e.target.value)}
-            />
-            {user.is_2fa_enabled && (
-              <TextField
-                fullWidth
-                label='2FA Code'
-                placeholder='Enter the code'
-                value={mfaCodeInput}
-                variant='outlined'
-                onChange={(e) => setMfaCodeInput(e.target.value)}
-              />
-            )}
-            <Button
-              fullWidth
-              color='primary'
-              disabled={!emailInput || !passwordInput || (user.is_2fa_enabled && !mfaCodeInput) || isUpdatingEmail}
-              variant='contained'
-              onClick={handleUpdateEmail}
-            >
-              Confirm
-            </Button>
-          </Stack>
-        </DialogContent>
-      </Dialog>
     </Stack>
   );
 }

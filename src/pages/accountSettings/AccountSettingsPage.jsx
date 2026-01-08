@@ -3,7 +3,7 @@ import { Box, Tab, Tabs, Paper, Container, useTheme, Divider, Typography } from 
 import { useSearchParams } from 'react-router-dom';
 import { useThemeContext } from '@/theme/ThemeContext';
 import AccountTab from './components/AccountTab';
-import SecurityTab from './components/SecurityTab';
+// import SecurityTab from './components/SecurityTab';
 import SettingsTab from './components/SettingsTab';
 
 export default function AccountSettingsPage() {
@@ -65,7 +65,7 @@ export default function AccountSettingsPage() {
             onChange={handleTabChange}
           >
             <Tab label={<Typography variant='button1'>Account</Typography>} />
-            <Tab label={<Typography variant='button1'>Security</Typography>} />
+            {/* <Tab label={<Typography variant='button1'>Security</Typography>} /> */}
             <Tab label={<Typography variant='button1'>Settings</Typography>} />
           </Tabs>
           <Divider />
@@ -73,8 +73,8 @@ export default function AccountSettingsPage() {
 
         <Box sx={{ flex: 1, overflow: 'auto', marginTop: 2 }}>
           {currentTab === 0 && <AccountTab />}
-          {currentTab === 1 && <SecurityTab />}
-          {currentTab === 2 && <SettingsTab />}
+          {/* {currentTab === 1 && <SecurityTab />} */}
+          {currentTab === 1 && <SettingsTab />}
         </Box>
       </Container>
     </Box>

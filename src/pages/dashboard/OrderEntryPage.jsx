@@ -209,7 +209,7 @@ export default function OrderEntryPage() {
                           />
                         </Card>
                         <Box sx={{ position: 'relative' }}>
-                          {renderMfaOverlay()}
+                          {/* {renderMfaOverlay()} */}
                           <Paper elevation={0} sx={tradingGuardStyles}>
                             <Card>
                               <CardContent>
@@ -281,7 +281,7 @@ export default function OrderEntryPage() {
                           </Stack>
                         </Stack>
                         <Box sx={{ position: 'relative', width: '25%', height: '100%' }}>
-                          {renderMfaOverlay()}
+                          {/* {renderMfaOverlay()} */}
                           <Paper
                             elevation={0}
                             sx={{

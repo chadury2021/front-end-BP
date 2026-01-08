@@ -330,12 +330,12 @@ function NavBar({ version }) {
                       size={1}
                       onClick={closeDrawer}
                     />
-                    <MobileNavBarItem
-                      isSubItem
-                      itemProps={NAV_BAR_LINKS.SETTINGS_SECURITY}
-                      size={1}
-                      onClick={closeDrawer}
-                    />
+                    {/* <MobileNavBarItem */}
+                    {/*   isSubItem */}
+                    {/*   itemProps={NAV_BAR_LINKS.SETTINGS_SECURITY} */}
+                    {/*   size={1} */}
+                    {/*   onClick={closeDrawer} */}
+                    {/* /> */}
                     <MobileNavBarItem
                       isSubItem
                       itemProps={NAV_BAR_LINKS.SETTINGS_SETTINGS}
@@ -496,7 +496,7 @@ function NavBar({ version }) {
             {isAuthenticated && (
               <NavBarItem active={location.pathname === '/settings'} itemProps={NAV_BAR_LINKS.PROFILE}>
                 <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.SETTINGS_ACCOUNT} />
-                <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.SETTINGS_SECURITY} />
+                {/* <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.SETTINGS_SECURITY} /> */}
                 <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.SETTINGS_SETTINGS} />
                 {(user.is_superuser || user.is_staff) && <NavBarItem isSubItem itemProps={NAV_BAR_LINKS.ADMIN} />}
               </NavBarItem>
