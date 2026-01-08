@@ -38,7 +38,7 @@ import resolveExchangeName from '@/shared/utils/resolveExchangeName';
 import { useTokenBalances } from '@/hooks/useTokenBalances';
 import { renderBalanceWithSubscript } from '@/util/priceFormatting';
 import { addUserFavouritePairs, deleteUserFavouritePairs } from '../../../apiServices';
-import { prettyDollars, prettyPrice, smartRound, shortenNumber } from '../../../util';
+import { prettyDollars, smartRound, shortenNumber } from '../../../util';
 import { useUserMetadata } from '../../../shared/context/UserMetadataProvider';
 import { ExchangeIcons } from '../../../shared/iconUtil';
 import { isolatedHolographicStyles, holographicShimmer } from '../../../theme/holographicEffects';
@@ -57,6 +57,8 @@ const INSTRUMENT_KEYWORDS = {
   spot: new Set(['SPOT']),
   future: new Set(['FUTURE', 'FUTURES']),
 };
+
+const BITFROST_FILTERED_EXCHANGES = ['Hyperliquid', 'Aster', 'Paradex', 'hyna', 'flxn', 'km']
 
 function normalizeStr(s) {
   return (s || '').trim().toUpperCase();
@@ -205,8 +207,8 @@ const MARKET_TYPE_TABS = [
   { label: 'Favorites', value: 'favorites' },
   { label: 'Spot', value: 'spot' },
   { label: 'Perps', value: 'perp' },
-  { label: 'DEX', value: 'dex' },
-  { label: 'Futures', value: 'future' },
+  // { label: 'DEX', value: 'dex' },
+  // { label: 'Futures', value: 'future' },
 ];
 
 // Chain configuration for DEX filtering
@@ -777,7 +779,10 @@ function PairSelector({
       });
     }
 
-    return [...new Set([...allExchanges, ...derivedPrefixes])].sort();
+    const exchangesArr = [...new Set([...allExchanges, ...derivedPrefixes])]
+
+    return exchangesArr.filter(el => BITFROST_FILTERED_EXCHANGES.includes(
+      el)).sort();
   }, [pairs, selectedMarketType]);
 
   const calculateNotionalBalance = useCallback(
@@ -916,14 +921,16 @@ function PairSelector({
     /**
      * Filter by selected exchanges for non-DEX tokens
      */
-    if (selectedMarketType !== 'dex' && selectedExchanges.length > 0) {
+    if (selectedMarketType !== 'dex') {
+      const selectedOrDefaultExchanges = selectedExchanges.length > 0 ? selectedExchanges : BITFROST_FILTERED_EXCHANGES
+
       tradingPairs = tradingPairs.filter((pair) => {
         // Direct exchange match
-        if (pair.exchanges.some((exchange) => selectedExchanges.includes(exchange))) return true;
+        if (pair.exchanges.some((exchange) => selectedOrDefaultExchanges.includes(exchange))) return true;
         // Derived builder prefix match for Hyperliquid perps
         if (selectedMarketType === 'perp') {
           const prefix = getHyperliquidPrefix(pair);
-          if (prefix && selectedExchanges.includes(prefix)) return true;
+          if (prefix && selectedOrDefaultExchanges.includes(prefix)) return true;
         }
         return false;
       });
