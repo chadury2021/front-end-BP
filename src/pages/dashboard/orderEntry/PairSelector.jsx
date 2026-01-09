@@ -421,7 +421,7 @@ function Row({ index, style, data }) {
             {pair.price_info?.market_cap ? `$${shortenNumber(pair.price_info.market_cap)}` : '-'}
           </Typography>
         ) : (
-          <ExchangeIcons exchanges={pair.exchanges} pairId={pair.id} />
+          <ExchangeIcons exchanges={pair.exchanges?.filter(el => BITFROST_FILTERED_EXCHANGES.includes(el)) || []} pairId={pair.id} />
         )}
       </Cell>
     </PairRow>
