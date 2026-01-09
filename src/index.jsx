@@ -9,6 +9,7 @@ import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-d
 import { OrderFormProvider } from '@/shared/context/OrderFormProvider';
 import { WalletProvider } from '@/shared/context/WalletProvider';
 import { Buffer } from 'buffer';
+import { LoaderGlobalStyles } from '@/theme/LoaderGlobalStyles';
 import { getVersionData } from './apiServices';
 import AccountBalancePage from './pages/accountBalance/AccountBalancePage';
 import AccountSettingsPage from './pages/accountSettings/AccountSettingsPage';
@@ -520,6 +521,7 @@ dashboardRoot.render(
         <UserMetadataProvider>
           <DexTokenManagerProvider>
             <AuthModalProvider>
+              <LoaderGlobalStyles />
               <Router>
                 <TitleProvider>
                   <SolanaWalletProvider>
