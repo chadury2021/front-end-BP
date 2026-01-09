@@ -27,7 +27,6 @@ import {
   Skeleton,
   useTheme,
 } from '@mui/material';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Unstable_Grid2';
 import { useCallback, useContext, useEffect, useState } from 'react';
 import TutorialHighlight from '@/shared/onboarding/TutorialHighlight';
@@ -764,16 +763,16 @@ export default function KeyManagementModal({ open, onClose }) {
 
                 {/* Bottom Bar */}
                 <Box sx={{ p: 2, borderTop: 1, borderColor: 'divider', backgroundColor: 'transparent' }}>
-                  <Stack alignItems='center' direction='row' justifyContent='space-between'>
+                  <Stack alignItems='center' direction='row' justifyContent='flex-end'>
                     {/* Help Link - Left Aligned */}
-                    <Link
-                      href='https://tread-labs.gitbook.io/api-docs/connecting-to-exchanges'
-                      rel='noopener noreferrer'
-                      target='_blank'
-                      variant='body2'
-                    >
-                      Learn how to connect accounts
-                    </Link>
+                    {/* <Link */}
+                    {/*   href='' */}
+                    {/*   rel='noopener noreferrer' */}
+                    {/*   target='_blank' */}
+                    {/*   variant='body2' */}
+                    {/* > */}
+                    {/*   Learn how to connect accounts */}
+                    {/* </Link> */}
 
                     {/* Only Show Active Checkbox - Right Aligned */}
                     <FormControlLabel
